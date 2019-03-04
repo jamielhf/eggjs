@@ -1,33 +1,47 @@
-# hackernews-async-ts
+# Egg Example for Ant Design Pro
 
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
+A full example with frontend([Ant Design Pro]) and backend([Egg.js]).
 
-## QuickStart
+## Development
 
-### Development
+Egg has integrated with assets tools by [egg-view-assets], so you don't have to start another command for serving assets.
 
 ```bash
-$ npm i
 $ npm run dev
-$ open http://localhost:7001/
 ```
 
-Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
+`npm run dev` will start a dev server for assets that configured in `config.assets.devServer`.
 
-### Deploy
+## Deployment
+
+Assets should be compiled before shipping.
 
 ```bash
-$ npm run tsc
+$ npm run build
+```
+
+It will be generated to `app/public` that hosted by Egg, due to the configration of ``.webpackrc`.
+
+Start Egg with prod environment.
+
+```bash
 $ npm start
 ```
 
-### Npm Scripts
+### Deploy assets to CDN
 
-- Use `npm run lint` to check code style
-- Use `npm test` to run unit test
-- se `npm run clean` to clean compiled js at development mode once
+TODO
 
-### Requirement
+## How to Contribute
 
-- Node.js 8.x
-- Typescript 2.8+
+Please let us know how can we help. Do check out [issues](https://github.com/eggjs/egg/issues) for bug reports or suggestions first.
+
+To become a contributor, please follow our [contributing guide](CONTRIBUTING.md).
+
+## License
+
+[MIT](LICENSE)
+
+[Egg.js]: https://eggjs.org
+[Ant Design Pro]: https://github.com/ant-design/ant-design-pro
+[egg-view-assets]: https://github.com/eggjs/egg-view-assets

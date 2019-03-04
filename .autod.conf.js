@@ -1,28 +1,33 @@
-'ues strict';
+'use strict';
 
 module.exports = {
   write: true,
-  plugin: 'autod-egg',
   prefix: '^',
-  devprefix: '^',
-  exclude: [
-    'test/fixtures',
-    'coverage',
+  plugin: 'autod-egg',
+  test: [
+    'test',
+    'benchmark',
+    'script',
+    '.roadhogrc.mock.js',
   ],
   dep: [
     'egg',
     'egg-scripts',
   ],
   devdep: [
+    'egg-ci',
+    'egg-bin',
+    'egg-mock',
     'autod',
     'autod-egg',
-    'egg-bin',
-    'tslib',
-    'typescript',
+    'eslint',
+    'eslint-config-egg',
+    'webstorm-disable-index',
   ],
-  keep: [
+  exclude: [
+    './test/fixtures',
+    './dist',
+    '**/*.test.js',
+    '**/*.e2e.js',
   ],
-  semver: [
-  ],
-  test: 'scripts',
 };

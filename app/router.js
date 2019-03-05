@@ -5,6 +5,6 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.all('/api/*', controller.home.proxy);
+  router.get('/api/user/:id', controller.user.info);
   router.get('*', controller.home.index);
 };

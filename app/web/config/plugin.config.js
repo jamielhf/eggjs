@@ -18,7 +18,7 @@ export default config => {
 
   config.plugin('ant-design-theme').use(AntDesignThemePlugin, [
     {
-      // antDir: require.resolve('antd').replace('lib/index.js', ''),
+      antDir: require.resolve('antd').replace('lib/index.js', ''),
       stylesDir,
       varFile: require.resolve('antd/lib/style/themes/default.less'),
       mainLessFile: outFile, //     themeVariables: ['@primary-color'],

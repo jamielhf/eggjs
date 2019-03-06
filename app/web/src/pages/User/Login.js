@@ -109,6 +109,7 @@ class LoginPage extends Component {
           </Submit>
           <div className={styles.other}>
             <FormattedMessage id="app.login.sign-in-with" />
+            <Icon type="github" className={styles.icon} theme="outlined"/>
             <Icon type="alipay-circle" className={styles.icon} theme="outlined" />
             <Icon type="taobao-circle" className={styles.icon} theme="outlined" />
             <Icon type="weibo-circle" className={styles.icon} theme="outlined" />

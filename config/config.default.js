@@ -32,6 +32,13 @@ module.exports = appInfo => {
   config.security = {
     csrf: false,
   };
+  // gifhub 配置
+  config.passportGithub = {
+    key: '741e6d458f9c8f27fb6f',
+    secret: 'c1465ac92cf1fef12a95f282b8de1d39dd4dfe8a',
+    // callbackURL: '/passport/github/callback',
+    // proxy: false,
+  };
 
   return config;
 };

@@ -15,12 +15,12 @@ exports.mysql = {
   package: 'egg-mysql',
 };
 
-// module.exports.passport = {
-//   enable: true,
-//   package: 'egg-passport',
-// };
+module.exports.passport = {
+  enable: true,
+  package: 'egg-passport',
+};
 
-// module.exports.passportGithub = {
-//   enable: true,
-//   package: 'egg-passport-github',
-// };
+module.exports.passportGithub = {
+  enable: true,
+  package: 'egg-passport-github',
+};

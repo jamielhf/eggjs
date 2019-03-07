@@ -1,47 +1,23 @@
-# Egg Example for Ant Design Pro
+# eggjs
 
-A full example with frontend([Ant Design Pro]) and backend([Egg.js]).
+## 功能点
 
-## Development
+## 启动
 
-Egg has integrated with assets tools by [egg-view-assets], so you don't have to start another command for serving assets.
+### 数据库
 
-```bash
-$ npm run dev
+``` bash
+# 编写其他表
+npx sequelize migration:generate --name=init-users
 ```
 
-`npm run dev` will start a dev server for assets that configured in `config.assets.devServer`.
+数据库初始化
 
-## Deployment
-
-Assets should be compiled before shipping.
-
-```bash
-$ npm run build
+``` bash
+# 升级数据库
+npx sequelize db:migrate
+# 如果有问题需要回滚，可以通过 `db:migrate:undo` 回退一个变更
+# npx sequelize db:migrate:undo
+# 可以通过 `db:migrate:undo:all` 回退到初始状态
+# npx sequelize db:migrate:undo:all
 ```
-
-It will be generated to `app/public` that hosted by Egg, due to the configration of ``.webpackrc`.
-
-Start Egg with prod environment.
-
-```bash
-$ npm start
-```
-
-### Deploy assets to CDN
-
-TODO
-
-## How to Contribute
-
-Please let us know how can we help. Do check out [issues](https://github.com/eggjs/egg/issues) for bug reports or suggestions first.
-
-To become a contributor, please follow our [contributing guide](CONTRIBUTING.md).
-
-## License
-
-[MIT](LICENSE)
-
-[Egg.js]: https://eggjs.org
-[Ant Design Pro]: https://github.com/ant-design/ant-design-pro
-[egg-view-assets]: https://github.com/eggjs/egg-view-assets

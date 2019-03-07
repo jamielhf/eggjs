@@ -10,10 +10,10 @@ exports.nunjucks = {
   package: 'egg-view-nunjucks',
 };
 
-exports.mysql = {
-  enable: true,
-  package: 'egg-mysql',
-};
+// exports.mysql = {
+//   enable: true,
+//   package: 'egg-mysql',
+// };
 
 module.exports.passport = {
   enable: true,
@@ -23,4 +23,9 @@ module.exports.passport = {
 module.exports.passportGithub = {
   enable: true,
   package: 'egg-passport-github',
+};
+
+exports.sequelize = {
+  enable: true,
+  package: 'egg-sequelize',
 };

@@ -7,6 +7,7 @@ module.exports = app => {
     uid: { type: STRING(30), primaryKey: true},
     name: STRING(30),
     photo: STRING(252),
+    type: STRING(30),
     created_at: DATE,
     updated_at: DATE,
   });

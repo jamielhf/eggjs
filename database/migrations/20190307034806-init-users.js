@@ -8,6 +8,8 @@ module.exports = {
       name: STRING(30),
       photo: STRING(255),
       type: STRING(30),
+      email: STRING(50),
+      password: STRING(50),
       created_at: DATE,
       updated_at: DATE,
     });

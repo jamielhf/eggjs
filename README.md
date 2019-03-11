@@ -6,6 +6,8 @@
 
 ### 数据库
 
+sequelize-cli 用于支持数据迁移和项目引导
+
 ``` bash
 # 编写其他表
 npx sequelize migration:generate --name=init-users
@@ -21,3 +23,5 @@ npx sequelize db:migrate
 # 可以通过 `db:migrate:undo:all` 回退到初始状态
 # npx sequelize db:migrate:undo:all
 ```
+
+model等用法可以参考 <https://github.com/eggjs/egg-sequelize>

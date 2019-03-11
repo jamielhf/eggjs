@@ -1,3 +1,5 @@
 coverage
 node_modules
 app/public
+run
+logs

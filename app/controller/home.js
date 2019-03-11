@@ -18,8 +18,8 @@ class HomeController extends Controller {
     // ctx.body = res.data;
     // ctx.status = res.status;
     ctx.body = {
-      a: 1
-    }
+      a: 1,
+    };
   }
 }
 

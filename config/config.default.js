@@ -17,16 +17,16 @@ module.exports = appInfo => {
 
   config.assets = {
     publicPath: '/public',
-    // devServer: {
-    //   autoPort: true,
-    //   command: 'npm start',
-    //   env: {
-    //     APP_ROOT: path.join(__dirname, '../app/web'),
-    //     BROWSER: 'none',
-    //     SOCKET_SERVER: 'http://127.0.0.1:{port}',
-    //   },
-    //   debug: true,
-    // },
+    devServer: {
+      autoPort: true,
+      command: 'npm start',
+      env: {
+        APP_ROOT: path.join(__dirname, '../app/web'),
+        BROWSER: 'none',
+        SOCKET_SERVER: 'http://127.0.0.1:{port}',
+      },
+      debug: true,
+    },
   };
 
   config.security = {

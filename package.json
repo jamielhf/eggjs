@@ -75,7 +75,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-pet",
+    "start": "egg-scripts start --daemon --title=egg-server-pet1",
     "stop": "egg-scripts stop --title=egg-server-pet",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug -r egg-ts-helper/register",

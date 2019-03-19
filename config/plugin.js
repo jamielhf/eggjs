@@ -1,9 +1,5 @@
 'use strict';
 
-exports.assets = {
-  enable: true,
-  package: 'egg-view-assets',
-};
 
 exports.nunjucks = {
   enable: true,
@@ -15,12 +11,12 @@ exports.nunjucks = {
 //   package: 'egg-mysql',
 // };
 
-module.exports.passport = {
+exports.passport = {
   enable: true,
   package: 'egg-passport',
 };
 
-module.exports.passportGithub = {
+exports.passportGithub = {
   enable: true,
   package: 'egg-passport-github',
 };

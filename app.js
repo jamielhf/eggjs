@@ -15,20 +15,18 @@ module.exports = app => {
       console.log(222, res);
       // 成功
       if (res) {
-        // 注册新用户
-        const newUser = await ctx.model.User.create({
+        const u = {
           uid: user_id,
           name: user.name,
           photo: user.photo,
-        });
+          type: 'user',
+        };
+        // 注册新用户
+        const newUser = await ctx.model.User.create(u);
 
         if (newUser) {
           console.log('已创建新用户', newUser);
-          return {
-            uid: user_id,
-            username: user.name,
-            photo: user.photo,
-          };
+          return u;
         }
         return {
           status: 500,

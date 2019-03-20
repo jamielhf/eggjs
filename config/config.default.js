@@ -1,44 +1,31 @@
-'use strict';
-
 const path = require('path');
+const fs = require('fs');
+module.exports = app => {
+  const exports = {};
 
-module.exports = appInfo => {
-  const config = exports = {};
-
-  // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1513765449219_5858';
-
-  config.view = {
-    root: path.join(appInfo.baseDir, 'app/view'),
-    mapping: {
-      '.html': 'nunjucks',
-    },
+  exports.siteFile = {
+    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   };
 
-  config.assets = {
-    publicPath: '/public',
-    devServer: {
-      autoPort: true,
-      command: 'npm start',
-      env: {
-        APP_ROOT: path.join(__dirname, '../app/web'),
-        BROWSER: 'none',
-        SOCKET_SERVER: 'http://127.0.0.1:{port}',
-      },
-      debug: true,
-    },
+  exports.logger = {
+    consoleLevel: 'DEBUG',
+    dir: path.join(app.baseDir, 'logs')
   };
 
-  config.security = {
-    csrf: false,
-  };
-  // gifhub 配置
-  config.passportGithub = {
-    key: '741e6d458f9c8f27fb6f',
-    secret: 'c1465ac92cf1fef12a95f282b8de1d39dd4dfe8a',
-    // callbackURL: '/passport/github/callback',
-    // proxy: false,
+  exports.static = {
+    prefix: '/public/',
+    dir: path.join(app.baseDir, 'public')
   };
 
-  return config;
+  exports.keys = '123456';
+
+  exports.middleware = [
+    'access'
+  ];
+
+  exports.reactssr = {
+    layout: path.join(app.baseDir, 'app/web/view/layout.html')
+  };
+
+  return exports;
 };

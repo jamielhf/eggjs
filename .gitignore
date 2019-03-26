@@ -14,5 +14,6 @@ run/
 app/public
 config/manifest.json
 app/web/.temp
+.vscode/
 app/web/node_modules
 .umi

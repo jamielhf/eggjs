@@ -1,27 +1,33 @@
-# eggjs
+# hackernews-async-ts
 
-## 功能点
+[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
 
-## 启动
+## QuickStart
 
-### 数据库
+### Development
 
-sequelize-cli 用于支持数据迁移和项目引导
-
-``` bash
-# 编写其他表
-npx sequelize migration:generate --name=init-users
+```bash
+$ npm i
+$ npm run dev
+$ open http://localhost:7001/
 ```
 
-数据库初始化
+Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
 
-``` bash
-# 升级数据库
-npx sequelize db:migrate
-# 如果有问题需要回滚，可以通过 `db:migrate:undo` 回退一个变更
-# npx sequelize db:migrate:undo
-# 可以通过 `db:migrate:undo:all` 回退到初始状态
-# npx sequelize db:migrate:undo:all
+### Deploy
+
+```bash
+$ npm run tsc
+$ npm start
 ```
 
-model等用法可以参考 <https://github.com/eggjs/egg-sequelize>
+### Npm Scripts
+
+- Use `npm run lint` to check code style
+- Use `npm test` to run unit test
+- se `npm run clean` to clean compiled js at development mode once
+
+### Requirement
+
+- Node.js 8.x
+- Typescript 2.8+

@@ -2,32 +2,27 @@
 
 module.exports = {
   write: true,
-  prefix: '^',
   plugin: 'autod-egg',
-  test: [
-    'test',
-    'benchmark',
-    'script',
-    '.roadhogrc.mock.js',
+  prefix: '^',
+  devprefix: '^',
+  exclude: [
+    'test/fixtures',
+    'coverage',
   ],
   dep: [
     'egg',
     'egg-scripts',
   ],
   devdep: [
-    'egg-ci',
-    'egg-bin',
-    'egg-mock',
     'autod',
     'autod-egg',
-    'eslint',
-    'eslint-config-egg',
-    'webstorm-disable-index',
+    'egg-bin',
+    'tslib',
+    'typescript',
   ],
-  exclude: [
-    './test/fixtures',
-    './dist',
-    '**/*.test.js',
-    '**/*.e2e.js',
+  keep: [
   ],
+  semver: [
+  ],
+  test: 'scripts',
 };

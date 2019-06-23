@@ -1,5 +1,7 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
+import path = require('path');
+
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
 
@@ -13,6 +15,15 @@ export default (appInfo: EggAppInfo) => {
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+  };
+
+  config.view = {
+    root: [
+      path.join(appInfo.baseDir, 'app/web'),
+    ].join(','),
+    mapping: {
+      '.html': 'nunjucks',
+    },
   };
   // the return config will combines to EggAppConfig
   return {

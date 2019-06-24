@@ -16,13 +16,21 @@ export default (appInfo: EggAppInfo) => {
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
-
+  config.assets = {
+    templatePath: path.join(appInfo.baseDir, 'app/web/public/index.html'),
+    templateViewEngine: 'nunjucks',
+    devServer: {
+      command: 'node -v',
+      port: 8000,
+    },
+  },
   config.view = {
     root: [
       path.join(appInfo.baseDir, 'app/web'),
     ].join(','),
     mapping: {
       '.html': 'nunjucks',
+      '.ts': 'assets',
     },
   };
   // the return config will combines to EggAppConfig

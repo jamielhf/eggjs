@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true,
     "charset": "utf8",
     "allowJs": false,
+    "jsx": "react",
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,

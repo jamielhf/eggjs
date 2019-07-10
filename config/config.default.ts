@@ -1,13 +1,11 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
-import path = require('path');
-
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1561280395597_2546';
+  config.keys = appInfo.name + '_1562726176647_3220';
 
   // add your egg config in here
   config.middleware = [];
@@ -16,23 +14,7 @@ export default (appInfo: EggAppInfo) => {
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
-  config.assets = {
-    templatePath: path.join(appInfo.baseDir, 'app/web/public/index.html'),
-    templateViewEngine: 'nunjucks',
-    devServer: {
-      command: 'node -v',
-      port: 8000,
-    },
-  },
-  config.view = {
-    root: [
-      path.join(appInfo.baseDir, 'app/web'),
-    ].join(','),
-    mapping: {
-      '.html': 'nunjucks',
-      '.ts': 'assets',
-    },
-  };
+
   // the return config will combines to EggAppConfig
   return {
     ...config,

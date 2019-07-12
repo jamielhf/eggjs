@@ -24,8 +24,11 @@
   "dependencies": {
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
+    "koa-webpack-dev-middleware": "^2.0.2",
+    "koa-webpack-hot-middleware": "^1.0.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "webpack": "^4.35.3"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",

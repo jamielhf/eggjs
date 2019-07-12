@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { hydrate } from 'react-dom/server';
-
+import { renderToString } from 'react-dom/server';
 
 class App extends React.Component  {
   constructor(){
@@ -15,4 +14,4 @@ class App extends React.Component  {
   }
 }
 
-export const content = hydrate(<App />);;
+export const content = renderToString(<App />);;
